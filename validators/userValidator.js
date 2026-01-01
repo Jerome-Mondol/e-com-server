@@ -1,8 +1,8 @@
 import { z } from 'zod';
 
 export const userValidator = z.object({
-    name:     z.string().min(2),
-    email:    z.string().email(),
-    password: z.string().min(6),
-    role:     z.union([z.enum(["customer", "supplier"]), z.string()]),
+    name:       z.string().min(2),
+    email:      z.string().email(),
+    password:   z.string().min(6),
+    role:       z.enum(["customer", "supplier"]),
 })
